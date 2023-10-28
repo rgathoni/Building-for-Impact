@@ -4,7 +4,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import useClipboard from "react-use-clipboard";
 import { useState } from "react";
-import Webcam from "react-webcam";
+// import Webcam from "react-webcam";
 
 const App = () => {
   const [textToCopy, setTextToCopy] = useState();
@@ -29,10 +29,12 @@ const App = () => {
         <h2>Speech to Text Converter</h2>
         <br />
         <p>
-          A React hook that converts speech from the microphone to text and
-          makes it available to your React components.
+          Hello! If you wish to see live transcriptions press 'Start Listening'
+          Press 'Stop' to pause or stop the transcribing :) 
         </p>
 
+        {/* React hook that converts speech from the microphone to text and
+          makes it available to your React components. */}
         <div className="main-content" onClick={() => setTextToCopy(transcript)}>
           {transcript}
         </div>
