@@ -1,3 +1,14 @@
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/members")
+def members():
+    return {"members": ["Member1", "Member2", "Member3"]}
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    
+"""
 import pickle
 import cv2
 import mediapipe as mp
@@ -84,3 +95,4 @@ while True:
 #release video capture and close all OpenCV windows
 cap.release()
 cv2.destroyAllWindows()
+"""
