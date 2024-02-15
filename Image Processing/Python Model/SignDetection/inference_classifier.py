@@ -1,3 +1,4 @@
+"""
 from flask import Flask
 app = Flask(__name__)
 
@@ -95,4 +96,3 @@ while True:
 #release video capture and close all OpenCV windows
 cap.release()
 cv2.destroyAllWindows()
-"""
