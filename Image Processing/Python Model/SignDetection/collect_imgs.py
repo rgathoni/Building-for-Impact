@@ -8,9 +8,9 @@ if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
 #count of signs to be collected
-number_of_classes = 5
+number_of_classes = 22
 #count of images per class to be collected
-dataset_size = 30
+dataset_size = 35
 
 cap = cv2.VideoCapture(0) #open webcam
 for j in range(number_of_classes):

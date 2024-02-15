@@ -30,7 +30,8 @@ mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
 #dictionary -- map numerical predictions to corresponding signs
-labels_dict = {0: 'A', 1: 'B', 2: 'C', 3: 'I love You', 4: 'Hello'}
+labels_dict = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'K', 10: 'L', 11: 'O', 12: 'P', 13: 'Q', 14: 'R', 15: 'T', 16: 'U', 17: 'V', 18: 'W', 19: 'X', 20: 'Y', 21: 'I love You', 22: 'Hello'}
+#A, B, C, D, E, F, G, H, I, K, L, O, P, Q, R, T, U, V, W, X, Y, ILY, My/Mine, You, Your, Sleep, Awake, Sick, Happy, Tired, Morning, Night, Hello"
 while True:
 
     data_aux = []
