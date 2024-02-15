@@ -1,5 +1,7 @@
 import os
 import cv2
+#introduce delay after 'Q' is pressed
+import time
 
 DATA_DIR = './data' ##collected data directory
 
@@ -8,7 +10,7 @@ if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
 #count of signs to be collected
-number_of_classes = 22
+number_of_classes = 24
 #count of images per class to be collected
 dataset_size = 35
 
@@ -28,6 +30,7 @@ for j in range(number_of_classes):
                     cv2.LINE_AA)
         cv2.imshow('frame', frame)
         if cv2.waitKey(25) == ord('q'):
+            start_time = time.time()  # Record the time when 'Q' is pressed
             break
     #press Q to break loop
 
@@ -35,11 +38,12 @@ for j in range(number_of_classes):
     counter = 0
     while counter < dataset_size:
         ret, frame = cap.read()
-        cv2.imshow('frame', frame)
-        cv2.waitKey(25)
-        cv2.imwrite(os.path.join(DATA_DIR, str(j), '{}.jpg'.format(counter)), frame)
+        if time.time() - start_time > 5:  # Check if 5 seconds have passed
+            cv2.imshow('frame', frame)
+            cv2.waitKey(25)
+            cv2.imwrite(os.path.join(DATA_DIR, str(j), '{}.jpg'.format(counter)), frame)
 
-        counter += 1
+            counter += 1
 
 #release webcam and close OpenCV windows
 cap.release()
