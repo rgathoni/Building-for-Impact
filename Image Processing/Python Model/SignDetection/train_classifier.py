@@ -8,6 +8,9 @@ import numpy as np
 #load processed data and labels from pickle file
 data_dict = pickle.load(open('./data.pickle', 'rb'))
 
+# for d in data_dict['data']:
+#     print(np.asarray(d).shape)
+
 #extract data and labels
 data = np.asarray(data_dict['data'])
 labels = np.asarray(data_dict['labels'])
