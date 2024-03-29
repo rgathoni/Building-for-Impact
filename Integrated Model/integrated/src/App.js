@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import useClipboard from "react-use-clipboard";
 import SpeechRecognition, {
@@ -35,7 +35,9 @@ const App = () => {
           {isCopied ? "Copied!" : "Copy to clipboard"}
         </button>
         <button onClick={startListening}>Start Listening</button>
-        <button onClick={SpeechRecognition.stopListening}>Stop Listening!</button>
+        <button onClick={SpeechRecognition.stopListening}>
+          Stop Listening!
+        </button>
       </div>
 
       {/* Webcam component */}
@@ -43,16 +45,15 @@ const App = () => {
         <Webcam
           audio={false}
           ref={webcamRef}
-          width={640}
-          height={480}
+          width={720}
+          height={560}
           screenshotFormat="image/jpeg"
-          
         />
       </div>
       <div className="btn-style">
         {/* Add functionality to flip Camera */}
-        <button onClick={startListening}>Front Camera</button>
-        <button onClick={SpeechRecognition.stopListening}>Back Camera</button>
+        <camflip onClick={startListening}>Front Camera</camflip>
+        <camflip onClick={SpeechRecognition.stopListening}>Back Camera</camflip>
       </div>
     </div>
   );

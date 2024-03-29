@@ -35,7 +35,7 @@ h2 {
 .main-content {
   max-width: 50rem;
   width: 100%;
-  min-height: 400px;
+  min-height: 380px;
   height: auto;
   padding: 18px 18px 120px 18px;
   position: relative;
@@ -56,6 +56,26 @@ h2 {
   display: flex;
 }
 
+camflip {
+  background: rgb(9, 117, 92);
+  color: rgb(255 255 255);
+  border-radius: 6px;
+  padding: 16px 20px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin-right: 100px;
+}
+camflip:focus,
+camflip:hover {
+  background: rgb(61, 201, 42);
+  box-shadow: 0 5px 30px 0 rgba(202, 71, 195, 0.1);
+}
+
 button {
   background: rgb(36, 216, 174);
   color: rgb(255 255 255);
@@ -68,7 +88,7 @@ button {
   display: flex;
   position: relative;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 button:focus,
@@ -81,5 +101,3 @@ button:hover {
   display: flex;
   justify-content: center;
 }
-
-
